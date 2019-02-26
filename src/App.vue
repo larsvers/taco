@@ -3,7 +3,9 @@
     <img alt="Vue logo" src="./assets/taco-tree.jpeg">
     <h5>I want Tacos.</h5>
     <hello-world msg="Welcome to Your Taco.js App"/>
-    <taco-graph :dataset="tacodata"></taco-graph>
+    <taco-graph :dataset="tacodata" name="mexican"></taco-graph>
+    <taco-graph :dataset="burgerdata" name="burger"></taco-graph>
+    <taco-graph :dataset="friesdata" name="fries"></taco-graph>
   </div>
 </template>
 
@@ -22,11 +24,17 @@ export default {
   data() {
     return {
       tacodata: [],
+      burgerdata: [],
+      friesdata: [],
     };
   },
   created() {
-    d3.csv('./tacodata.csv', d3.autoType).then(res => {
-      this.tacodata = res;
+    const tacos = d3.csv('./tacodata.csv');
+    const burgers = d3.csv('./burgerdata.csv');
+    const fries = d3.csv('./friesdata.csv');
+
+    Promise.all([tacos, burgers, fries]).then(res => {
+      [this.tacodata, this.burgerdata, this.friesdata] = res;
     });
   },
 };
