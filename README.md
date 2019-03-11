@@ -1,6 +1,6 @@
 # taco
 
-Step through a basic vue example like so:
+Step through a vue example using [single file components](https://vuejs.org/v2/guide/single-file-components.html) like so:
 
 1. Clone repo
 
