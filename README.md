@@ -1,29 +1,31 @@
 # taco
 
-## Project setup
-```
-npm install
-```
+Step through a basic vue example like so:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+1. Clone repo
 
-### Compiles and minifies for production
-```
-npm run build
-```
+   ```
+   git clone git@github.com:larsvers/taco.git
+   ```
 
-### Run your tests
-```
-npm run test
-```
+2. Set up
 
-### Lints and fixes files
-```
-npm run lint
-```
+   ```
+   npm install
+   ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+3. Serve
+
+   ```
+   npm run serve
+   ```
+
+4. Each step is a branch so you can walk through checking out the next branch:
+
+   ```
+   git checkout sfc#1
+   git checkout sfc#2
+   git checkout sfc#3
+   git checkout sfc#4
+   git checkout sfc#5
+   ```
